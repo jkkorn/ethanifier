@@ -19,9 +19,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     //TODO: Replace with an app token you generate for free at http://www.supportkit.io
-    SKTSettings* settings = [SKTSettings settingsWithAppToken:@"YOUR-APP-TOKEN"];
+    SKTSettings* settings = [SKTSettings settingsWithAppToken:@"19vnmjdm96tdkauh62m7tenjo"];
     settings.enableAppWideGesture = NO;
     settings.enableGestureHintOnFirstLaunch = NO;
+    
+    settings.conversationAccentColor = [UIColor blueColor];
+    settings.conversationStatusBarStyle = UIStatusBarStyleLightContent;
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] }];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] }];
 
     [SupportKit initWithSettings:settings];
     
